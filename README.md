@@ -126,6 +126,7 @@ src/
 - **Resposta:** array de objetos `Gerador` com `nome`, `codigo`, `tipo` e `potencia` (em kW).
 
 Se a API não estiver rodando, a tela exibirá uma mensagem orientando a verificar se o backend está em `http://localhost:8080`.
+Ao iniciar a API que se encontra no repositorio "https://github.com/DevJohnL/bolt-challenge-api.git" aguarde a sincronização completa dos dados caso seja a primeira vez que está acessando a ferramenta.
 
 ---
 
