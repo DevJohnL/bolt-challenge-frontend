@@ -1,0 +1,27 @@
+@if (loading) {
+  <p class="loading">Carregando...</p>
+} @else if (error) {
+  <p class="error">{{ error }}</p>
+} @else {
+  <ul class="lista-geradores">
+    @for (gerador of geradores; track gerador.codigo) {
+      <li class="gerador-card">
+        <span class="nome">{{ gerador.nome }}</span>
+        <span class="codigo">Código: {{ gerador.codigo }}</span>
+        <span class="tipo">Tipo: {{ gerador.tipo }}</span>
+        <span class="potencia">Potência: {{ (gerador.potencia ?? 0) / 1000000 }} GW</span>
+      </li>
+    }
+  </ul>
+  @if (geradores.length === 0) {
+    <p class="vazio">Nenhum gerador encontrado.</p>
+  }
+  <aside class="nota-origem">
+    <p>
+      A API faz uma sincronização com os dados da ANEEL a cada uma hora.
+      Os dados têm origem no conjunto <strong>RALIE – Relatório de Acompanhamento da Expansão da Oferta de Geração de Energia Elétrica</strong>
+      (arquivo ralie-usina.csv), disponível em
+      <a href="https://dadosabertos.aneel.gov.br/dataset/ralie-relatorio-de-acompanhamento-da-expansao-da-oferta-de-geracao-de-energia-eletrica/resource/4a615df8-4c25-48fa-bbea-873a36a79518" target="_blank" rel="noopener noreferrer">Dados Abertos - ANEEL</a>.
+    </p>
+  </aside>
+}
