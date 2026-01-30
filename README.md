@@ -57,7 +57,7 @@ Em outro terminal, inicie a API para que o frontend consiga carregar os geradore
 ### 3. Iniciar o frontend
 
 ```bash
-npm start
+ng serve
 ```
 
 A aplicação estará disponível em: **http://localhost:4200**
@@ -144,4 +144,4 @@ interface Gerador {
 
 ## Licença e dados abertos
 
-Os dados exibidos vêm do portal **Dados Abertos da ANEEL**, sob [Open Database License (ODbL)](http://www.opendefinition.org/licenses/odc-odbl). Este projeto é de uso educacional/avaliação (Bolt Challenge).
+Os dados exibidos vêm do portal **Dados Abertos da ANEEL**, sob [Open Database License (ODbL)](http://www.opendefinition.org/licenses/odc-odbl). 
